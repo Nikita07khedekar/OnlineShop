@@ -88,16 +88,10 @@ margin-bottom:10px;
     background-color: #ff8c00;
     color: black;
 }
-.size {
+.sizeselect{
     font-weight: 700;
     color: black;
     padding: 10px;
     word-spacing: 40px;
     margin-bottom: 5px;
-}
-
-.size span{
-    background-color:antiquewhite; 
-    padding: 10px;
-   
 }

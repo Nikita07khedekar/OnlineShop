@@ -122,8 +122,7 @@ namespace UserInterface.Controllers
         {
             var productsVm = new ViewProductsViewModel
             {
-                Products = product.GetAll().ToList(),
-                ProductSizes = productSize.GetAll().ToList()
+                Products = product.GetAll().ToList()
             };
 
             return View(productsVm);

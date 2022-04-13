@@ -27,12 +27,48 @@
             </div>
 
             <div class="caption">
-                <span class="btn-danger">Rs. @items.ProductPrice/-</span>
+                <span class="btn-danger">Rs. @items.ProductPrice/-</span>&nbsp;&nbsp;&nbsp;
+                <label>size</label>
+                <select name="" id="" class="">
+                    @if (@items.ProductSize.S == 0)
+                    {
+                        <option disabled>S</option>
+                    }
+                    else
+                    {
+
+                        <option value="S">S</option>
+                    }
+                    @if (@items.ProductSize.M == 0)
+                    {
+                        <option disabled>M</option>
+                    }
+                    else
+                    {
+
+                        <option value="M">M</option>
+                    }
+                    @if (@items.ProductSize.L == 0)
+                    {
+                        <option disabled>L</option>
+                    }
+                    else
+                    {
+
+                        <option value="L">L</option>
+                    }
+                    @if (@items.ProductSize.Xl == 0)
+                    {
+                        <option disabled>Xl</option>
+                    }
+                    else
+                    {
+
+                        <option value="Xl">Xl</option>
+                    }
+                </select>
+
             </div>
-            @*<div>
-                <label>--Select size--</label>
-                @Html.DropDownListFor(@items.ProductSizeId, new SelectList(Model.productSize, "ProductCategoryId", "ProductCategoryType"), "Select Product Type", new { @class = "form-control" })
-            </div>*@
         </div>
         <div>
             <a class="btn btn-lg btn-block btn-warning button">Buy Now</a>

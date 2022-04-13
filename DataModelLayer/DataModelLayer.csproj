@@ -65,6 +65,9 @@
     <Compile Include="Cart.cs">
       <DependentUpon>ShoppingPortalEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="DeliveryAddress.cs">
+      <DependentUpon>ShoppingPortalEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="DeliveryOrderData_Result.cs">
       <DependentUpon>ShoppingPortalEntities.tt</DependentUpon>
     </Compile>

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using DataModelLayer;
 using BusinessLogicLayer.Users;
+using UserInterface.ViewModel;
+using Microsoft.AspNet.Identity;
 
 namespace UserInterface.Controllers
 {
@@ -24,6 +26,19 @@ namespace UserInterface.Controllers
             return View(products);
         }
 
+      public ActionResult AddAddress(AddAddressViewModel viewModel)
+        {
+            var user = _viewProducts.GetUser(viewModel.AspNetUser.Id);
+            return View(user);
+        }
 
+        [HttpPost]
+        public ActionResult SaveAddress(AddAddressViewModel viewModel)
+        {
+            viewModel.DeliveryAddress.UserId = viewModel.AspNetUser.Id;
+            _viewProducts.AddAddress(viewModel.DeliveryAddress);
+            return RedirectToAction("ShowProducts","User");
+
+        }
     }
 }

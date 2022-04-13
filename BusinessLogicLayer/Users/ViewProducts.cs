@@ -17,5 +17,15 @@ namespace BusinessLogicLayer.Users
             var products = _showProducts.GetAllProduct();
             return products;
         }
+
+        public AspNetUser GetUser(string id)
+        {
+            return _showProducts.GetUser(id);
+        }
+
+        public void AddAddress(DeliveryAddress deliveryAddress)
+        {
+            _showProducts.AddAddress(deliveryAddress);
+        }
     }
 }

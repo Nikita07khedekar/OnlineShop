@@ -92,7 +92,7 @@ namespace UserInterface.Controllers
             OrderConfirmed orderConfirm = new OrderConfirmed()
             {
                 OrderConfirmedId = order.OrderConfirmedId,
-                ProductId = order.ProductId,
+                ProductId = (int)order.ProductId,
                 CustomerId = order.CustomerId,
                 CustomerName = order.CustomerName,
                 CustomerAddress = order.CustomerAddress,

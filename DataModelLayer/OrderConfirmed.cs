@@ -15,14 +15,14 @@ namespace DataModelLayer
     public partial class OrderConfirmed
     {
         public int OrderConfirmedId { get; set; }
-        public Nullable<int> ProductId { get; set; }
+        public int ProductId { get; set; }
         public string CustomerId { get; set; }
         public string CustomerName { get; set; }
         public string CustomerAddress { get; set; }
         public string CustomerMobile { get; set; }
         public string PaymentMode { get; set; }
         public string OrderStatus { get; set; }
-        public Nullable<System.DateTime> OrderDeliveryUpto { get; set; }
+        public System.DateTime OrderDeliveryUpto { get; set; }
         public System.DateTime OrderDate { get; set; }
         public string Size { get; set; }
     

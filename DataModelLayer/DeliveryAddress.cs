@@ -12,14 +12,16 @@ namespace DataModelLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Cart
+    public partial class DeliveryAddress
     {
-        public int CartId { get; set; }
+        public int Id { get; set; }
         public string UserId { get; set; }
-        public int ProductId { get; set; }
-        public int Quantity { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string PhoneNumber { get; set; }
     
         public virtual AspNetUser AspNetUser { get; set; }
-        public virtual Product Product { get; set; }
     }
 }

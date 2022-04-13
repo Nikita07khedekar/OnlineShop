@@ -1,28 +1,45 @@
-﻿@model  IEnumerable<DataModelLayer.Product>
+﻿@model  UserInterface.ViewModel.ViewProductsViewModel
 @{
     ViewBag.Title = "ViewProducts";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link href="~/Content/ProductSheet.css" rel="stylesheet" />
-<h2>ViewProducts</h2>
+<h2 id="h2">Shop Products</h2>
 
-@foreach (var items in Model)
+<div class="filters">
+
+</div>
+
+@foreach (var items in Model.Products)
 {
+<div class="box">
+
     <div class="col-md-3 thumbnail display">
         <img src="@Url.Content(items.ProductImage)" alt="Waterfall" />
 
-        <div class="caption Name">
-            <h4> <span> @items.ProductName </span></h4>
-        </div>
+        <div id="item">
+            <div class="caption Name">
+                <h4> <span class="caption Name"> @items.ProductName </span></h4>
+            </div>
 
-        <div class="caption ">
-            <span>@items.ProductDescription </span>
+            <div class="caption">
+                <span>@items.ProductDescription </span>
+            </div>
+
+            <div class="caption">
+                <span class="btn-danger">Rs. @items.ProductPrice/-</span>
+            </div>
+            @*<div>
+                <label>--Select size--</label>
+                @Html.DropDownListFor(@items.ProductSizeId, new SelectList(Model.productSize, "ProductCategoryId", "ProductCategoryType"), "Select Product Type", new { @class = "form-control" })
+            </div>*@
         </div>
-        <div class="caption">
-            <span class="btn-danger">Rs. @items.ProductPrice/-</span>
+        <div>
+            <a class="btn btn-lg btn-block btn-warning button">Buy Now</a>
+            <a class="btn btn-lg btn-block button btn-orange">Add To Cart </a>
         </div>
     </div>
-
+</div>
 }
 
 
